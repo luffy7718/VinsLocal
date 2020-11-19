@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <dimen name="margin_buttomsheet">10dip</dimen>
+    <dimen name="height_buttomsheet">90dip</dimen>
+
+</resources>

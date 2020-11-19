@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:id="@+id/framDistance"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.lekcie.vinslocal.Fragments.PrixFragment">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Choisir une distance"
+        android:textSize="20sp" />
+
+        <Button
+        android:id="@+id/btnMaps5km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffffd4"
+        android:background="#9E0E40"
+        android:layout_marginTop="15dp"
+        android:text="5 km" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgretour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@mipmap/ic_retour_page" />
+
+            <Button
+                android:id="@+id/btnMaps10km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffd4"
+                android:background="#9E0E40"
+                android:layout_marginTop="40dp"
+                 android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="10 km" />
+        </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btnMaps20km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffd4"
+        android:background="#9E0E40"
+
+        android:layout_gravity="center"
+        android:text="20 km" />
+
+
+
+
+</LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:id="@+id/framPrix"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.lekcie.vinslocal.Fragments.PrixFragment">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/txtprix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Choisir un prix"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnprix5-50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffffd4"
+        android:background="#9E0E40"
+        android:layout_marginTop="15dp"
+        android:text="0-5€" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgretour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@mipmap/ic_retour_page" />
+
+                <Button
+                    android:id="@+id/btnprix50-250"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffd4"
+                    android:background="#9E0E40"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:text="5-50€" />
+            </RelativeLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btnprixplus250"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffd4"
+        android:background="#9E0E40"
+
+        android:layout_gravity="center"
+        android:text="+50€" />
+
+
+
+
+</LinearLayout>
+
+
+</FrameLayout>

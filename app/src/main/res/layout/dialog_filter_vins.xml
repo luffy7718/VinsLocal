@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:id="@+id/mainLayout"
+    android:layout_gravity="center">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+                <ImageButton
+                    android:id="@+id/imgDetailClose"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/ic_close_black_24dp"
+                    android:backgroundTint="#ffffff" />
+                <FrameLayout
+                    android:id="@+id/frlClose"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                </FrameLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtTitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:text="Filtrer les résultats"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDelFilter"
+                android:layout_width="175dp"
+                android:layout_height="34dp"
+                android:textSize="12sp"
+                android:textColor="#FFFF"
+                android:background="#9E0E40"
+                android:layout_marginRight="15dp"
+                android:text="Supprimer les filtres"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:fadeScrollbars="false"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="100dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="2dp">
+
+                <com.lekcie.vinslocal.Utils.SectionView
+                    android:id="@+id/svCepages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:headSize="50dp"
+                    app:headIcon="@drawable/ic_arrow_down_24dp"
+                    app:headText="Cepages"
+                    app:isCollapse="true">
+
+                    <LinearLayout
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnSelectAllCepages"
+                            android:layout_width="110dp"
+                            android:layout_marginLeft="17dp"
+                            android:layout_height="34dp"
+                            android:textSize="12sp"
+                            android:layout_alignParentLeft="true"
+                            android:background="#9E0E40"
+                            android:textColor="#FFFF"
+                            android:text="Tout cocher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnDelCepages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:textSize="12sp"
+                                android:textColor="#FFFF"
+                                android:background="#9E0E40"
+                                android:layout_marginRight="17dp"
+                                android:text="Effacer"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFilterCepages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="12dp"
+                        android:paddingBottom="15dp"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+
+
+                </com.lekcie.vinslocal.Utils.SectionView>
+
+
+                <com.lekcie.vinslocal.Utils.SectionView
+                    android:id="@+id/svCaract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:headIcon="@drawable/ic_arrow_down_24dp"
+                    app:headSize="50dp"
+                    app:headText="Caractéristiques"
+                    app:isCollapse="true">
+
+                    <LinearLayout
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/btnSelectAllCaract"
+                            android:layout_width="110dp"
+                            android:layout_marginLeft="17dp"
+                            android:layout_height="34dp"
+                            android:textSize="12sp"
+                            android:layout_alignParentLeft="true"
+                            android:background="#9E0E40"
+                            android:textColor="#FFFF"
+                            android:text="Tout cocher" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnDelCaract"
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:textSize="12sp"
+                                android:textColor="#FFFF"
+                                android:background="#9E0E40"
+                                android:layout_marginRight="17dp"
+                                android:text="Effacer"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFilterCaract"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="12dp"
+                        android:paddingBottom="15dp"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+
+
+                </com.lekcie.vinslocal.Utils.SectionView>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnSelectAllCouleur"
+                        android:layout_width="110dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_height="34dp"
+                        android:textSize="12sp"
+                        android:layout_alignParentLeft="true"
+                        android:background="#9E0E40"
+                        android:textColor="#FFFF"
+                        android:text="Tout cocher" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                    <Button
+                            android:id="@+id/btnDelCouleur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:textSize="12sp"
+                            android:textColor="#FFFF"
+                            android:background="#9E0E40"
+                            android:layout_marginRight="17dp"
+                            android:text="Effacer"/>
+                    </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFilterCouleur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="12dp"
+                        android:paddingBottom="15dp"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <EditText
+                android:layout_width="200dp"
+                android:id="@+id/edtAnnee"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:hint="ex:2015"
+                android:layout_below="@id/radioGroupAnnee"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupAnnee"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:id="@+id/rbPartir"
+                    android:text="à Partir de:" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbAnneeExact"
+                    android:checked="true"
+                    android:text="Annee Exact:" />
+
+
+            </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text="Prix"/>
+                    <com.lekcie.vinslocal.Utils.RangeBar
+                        android:id="@+id/range_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:max="50" />
+                    <TextView
+                        android:id="@+id/txtpgrPrix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="Entre 0€ et 200 €">
+
+                    </TextView>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/text"
+                android:text="Recommandé par nos œnologues" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+
+                android:id="@+id/rgœnologues"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/non" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="90dp"
+                    android:id="@+id/rboui"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbnon"
+                    android:checked="true"
+                    android:text="Non" />
+
+
+            </RadioGroup>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="400dp"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btnFilter"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:textColor="#FFFF"
+                android:background="#9E0E40"
+                android:text="Filtrer"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

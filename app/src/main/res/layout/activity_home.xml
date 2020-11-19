@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".Activities.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="107dp"
+            android:layout_height="81dp"
+            android:layout_above="@id/txtVin"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/txtVin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="serif"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="Trouver un vin autour de vous!"
+            android:textSize="35sp" />
+
+
+        <FrameLayout
+            android:id="@+id/frtHome"
+            tools:context="com.lekcie.vinslocal.Fragments.CouleurFragment"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="0dp">
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:id="@+id/imgMaps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_maps" />
+
+
+
+            <ImageView
+                android:id="@+id/imgReglage"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_settings" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
