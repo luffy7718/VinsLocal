@@ -7,8 +7,7 @@ public class Constants {
     public static final String _TAG_LOG = "#GeolocalisationVins";
     public static final String _ERROR_PHP = "Erreur PHP";
     public static final String APP_NAME = "GeolocalisationVins";
-    public static final String _URL_WEBSERVICE =  "http://192.168.1.53/VinsLocal/";
-    //public static final String _URL_WEBSERVICE =  "https://mesprojetsafpa.000webhostapp.com/VinsLocal/";
+    public static final String _URL_WEBSERVICE =  "https://mesprojetsafpa.000webhostapp.com/VinsLocal/";
     //FRAGMENT CODE -->HomeActivity
     public final static int _FRAG_couleur = 0;
     public final static int _FRAG_prix = 1;
